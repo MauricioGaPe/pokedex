@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="src/styles/style.css" rel="stylesheet" type="text/css">
+    <title>Pokedex</title>
+</head>
+
+<body>
+    <section class="contenedor centrar">
+        <div>
+            <img src="" id="pokeImg" class="centrar pokeImg"><br>
+            <a class="centrar nomNum"><span id="numberPokemon"></span><span id="namePokemon"></span></a><br>
+        </div>
+        <img src="./src/assets/pokedex.png" alt="Pokedex" id="pokedex" class="pokedex centrar"><br>
+        <div>
+            <button class="boton centrar" onclick="fetchPokemon()">Consultar</button><br>
+            <span class="atribute centrar textYellow" style="top: 36%; left: 60%;">Tipo</span>
+            <span class="atribute centrar" id="tipo" style="top: 36%; left: 64%;"></span>
+            <span class="atribute centrar textYellow"  style="top: 36%; left: 69%;">Franqueza</span>
+            <div class="atribute centrar" id="franqueza" style="top: 36%; left: 75%;"></div>
+            <span class="atribute centrar textYellow" id="PSPokemon" style=" top: 48%; left: 60%;">PS</span>
+            <div class="flexAtributesPS centrar" style="top: 44%; left: 60%;">
+                <div id="blockPS0"></div>
+                <div id="blockPS1"></div>
+                <div id="blockPS2"></div>
+                <div id="blockPS3"></div>
+                <div id="blockPS4"></div>
+                <div id="blockPS5"></div>
+                <div id="blockPS6"></div>
+                <div id="blockPS7"></div>
+                <div id="blockPS8"></div>
+                <div id="blockPS9"></div>
+            </div>
+            <span class="atribute centrar textYellow" id="ATKPokemon" style=" top: 48%; left: 63.5%;">ATK</span>
+            <div class="flexAtributesPS centrar" style=" top: 44%; left: 63.5%;">
+                <div id="blockATK0"></div>
+                <div id="blockATK1"></div>
+                <div id="blockATK2"></div>
+                <div id="blockATK3"></div>
+                <div id="blockATK4"></div>
+                <div id="blockATK5"></div>
+                <div id="blockATK6"></div>
+                <div id="blockATK7"></div>
+                <div id="blockATK8"></div>
+                <div id="blockATK9"></div>
+            </div>
+            <span class="atribute centrar textYellow" id="DEFPokemon" style=" top: 48%; left: 67%;">DEF</span>
+            <div class="flexAtributesPS centrar" style=" top: 44%; left: 67%;">
+                <div id="blockDEF0"></div>
+                <div id="blockDEF1"></div>
+                <div id="blockDEF2"></div>
+                <div id="blockDEF3"></div>
+                <div id="blockDEF4"></div>
+                <div id="blockDEF5"></div>
+                <div id="blockDEF6"></div>
+                <div id="blockDEF7"></div>
+                <div id="blockDEF8"></div>
+                <div id="blockDEF9"></div>
+            </div>
+            <span class="atribute centrar textYellow" id="SPATKPokemon" style=" top: 48%; left: 70.5%;">SP.ATK</span>
+            <div class="flexAtributesPS centrar" style=" top: 44%; left: 70.5%;">
+                <div id="blockSPATK0"></div>
+                <div id="blockSPATK1"></div>
+                <div id="blockSPATK2"></div>
+                <div id="blockSPATK3"></div>
+                <div id="blockSPATK4"></div>
+                <div id="blockSPATK5"></div>
+                <div id="blockSPATK6"></div>
+                <div id="blockSPATK7"></div>
+                <div id="blockSPATK8"></div>
+                <div id="blockSPATK9"></div>
+            </div>
+            <span class="atribute centrar textYellow" id="SPDEFPokemon" style=" top: 48%; left: 74%;">SP.DEF</span>
+            <div class="flexAtributesPS centrar" style=" top: 44%; left: 74%;">
+                <div id="blockSPDEF0"></div>
+                <div id="blockSPDEF1"></div>
+                <div id="blockSPDEF2"></div>
+                <div id="blockSPDEF3"></div>
+                <div id="blockSPDEF4"></div>
+                <div id="blockSPDEF5"></div>
+                <div id="blockSPDEF6"></div>
+                <div id="blockSPDEF7"></div>
+                <div id="blockSPDEF8"></div>
+                <div id="blockSPDEF9"></div>
+            </div>
+            <span class="atribute centrar textYellow" id="SpeedPokemon" style=" top: 48%; left: 77.5%;">SPEED</span>
+            <div class="flexAtributesPS centrar" style=" top: 44%; left: 77.5%;">
+                <div id="blockSpeed0"></div>
+                <div id="blockSpeed1"></div>
+                <div id="blockSpeed2"></div>
+                <div id="blockSpeed3"></div>
+                <div id="blockSpeed4"></div>
+                <div id="blockSpeed5"></div>
+                <div id="blockSpeed6"></div>
+                <div id="blockSpeed7"></div>
+                <div id="blockSpeed8"></div>
+                <div id="blockSpeed9"></div>
+            </div>
+            <input class="centrar inputPokemon textYellow" type="text" placeholder="pikachu" id="pokeName" name="pokeName" value="pikachu"><br>
+            <div class="centrar tablaMovimientos" id="tablaMovimientos"></div>
+        </div>
+    </section>
+    <!--<h1>Pokedex</h1>
+    <input type="text" placeholder="pikachu" id="pokeName" name="pokeName" value="pikachu"><br>
+    <img src="./src/assets/pokebola.png" alt="Pokemon" id="pokeImg" width="150px"><br>
+    <button onclick="fetchPokemon()">Consultar</button><br>
+    <a>Nombre: <span id="namePokemon"></span></a><br>
+    <a>Tipo de Pokemon: <span id="tipoPokemon"></span></a><br>
+    <table>
+        <tr>
+            <th>Estadistica</th>
+            <th>Puntos Base</th>
+            <th>Esfuerzo</th>
+        </tr>
+        <tr>
+            <td id="estCeroName">0</td>
+            <td id="estCeroTipo">0</td>
+            <td id="estCeroEsf">0</td>
+        </tr>
+        <tr>
+            <td id="estUnoName">0</td>
+            <td id="estUnoTipo">0</td>
+            <td id="estUnoEsf">0</td>
+        </tr>
+        <tr>
+            <td id="estDosName">0</td>
+            <td id="estDosTipo">0</td>
+            <td id="estDosEsf">0</td>
+        </tr>
+        <tr>
+            <td id="estTresName">0</td>
+            <td id="estTresTipo">0</td>
+            <td id="estTresEsf">0</td>
+        </tr>
+        <tr>
+            <td id="estCuatroName">0</td>
+            <td id="estCuatroTipo">0</td>
+            <td id="estCuatroEsf">0</td>
+        </tr>
+        <tr>
+            <td id="estCincoName">0</td>
+            <td id="estCincoTipo">0</td>
+            <td id="estCincoEsf">0</td>
+        </tr>
+    </table>
+    <table>
+        <tbody id="tbodyMov">
+            <tr>
+                <th>Movimiento</th>
+            </tr>
+        </tbody>
+    </table>
+</body>!-->
+<footer>
+    <script src="./src/code/pokedex.js"></script>
+</footer>
+
+</html>

@@ -1,0 +1,101 @@
+@font-face {
+    font-family: 'Pokemon';
+    src: url('./PokemonSolid.ttf') format('ttf');
+    font-style: normal;
+    font-weight: normal;
+  }
+
+.pokedex {
+    width: 70%;
+    height: 100%;
+}
+
+.contenedor {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.centrar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pokeImg { 
+    top: 43%;
+    left: 34%;
+    width: 15%;
+}
+
+.nomNum{
+    top: 58%;
+    left: 33%;
+    font-weight: bolder;
+}
+
+.boton {
+    left: 30%;
+    top: 87.4%;
+    height: 10.6%;
+    width: 11.4%;
+    font-size: 202%;
+    font-family: Open Sans;
+    background: rgba(95,196,128,255);
+    border-radius: 10%;
+}
+
+.inputPokemon {
+    background: rgba(8,64,53,255);
+    top: 87.7%;
+    left: 62.5%;
+    width: 9.9%;
+    height: 6.6%;
+    border-radius: 10%;
+}
+
+.flexAtributesPS {
+    width: 2.3%;
+    height: 5.3%;
+    display: inline-flex;
+    flex-direction: column-reverse;
+    background: rgba(8,64,53,255);
+}
+
+.flexAtributesPS > div {
+    background-color: white;
+    margin: 1px;
+    padding: 1px;
+    font-size: 30px;
+  }
+
+.textYellow {
+    color: rgba(252,216,21,255);
+}
+
+.tablaMovimientos {
+    top: 87.7%;
+    left: 74.9%;
+    width: 10.3%;
+    height: 7.2%;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.totalPS {
+    color: white;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
